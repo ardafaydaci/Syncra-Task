@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Aylık raporu hazırla",
+        "description": "Temmuz ayı satış ve pazarlama raporları hazırlanacak.",
+        "assigned_to": 2,
+        "created_by": 1,
+        "due_date": "2025-08-30",
+        "status": "todo"
+    },
+    {
+        "id": 2,
+        "title": "Yeni web sitesi tasarımını tamamla",
+        "description": "Ana sayfa ve ürünler sayfası için tasarımlar yapılacak.",
+        "assigned_to": 2,
+        "created_by": 1,
+        "due_date": "2025-09-15",
+        "status": "in_progress"
+    }
+]
