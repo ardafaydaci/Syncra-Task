@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container" id="login-ekrani">
+        <h1>Şirket Görev Yönetimi</h1>
+        <p>Lütfen kullanıcı bilgilerinizi girin.</p>
+
+        <!-- Hata mesajları için alan -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div style="color: red; margin-bottom: 10px;">{{ messages[0] }}</div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- action ve method ekleyerek formu backend'e yönlendiriyoruz -->
+        <form id="login-formu" action="{{ url_for('login') }}" method="POST">
+            <input type="text" id="username" name="username" placeholder="Kullanıcı Adı" required>
+            <input type="password" id="password" name="password" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+</body>
+</html>

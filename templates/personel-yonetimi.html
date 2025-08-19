@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personel Yönetimi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Proje Yonetimi</h2>
+            </div>
+            <ul class="menu-list">
+                <li class="menu-item" onclick="window.location.href='/yonetici'"><i class="fa-solid fa-list"></i> Liste Görünümü</li>
+                <li class="menu-item" onclick="window.location.href='/kanban'"><i class="fa-solid fa-table-columns"></i> Pano Görünümü</li>
+                <li class="menu-item active"><i class="fa-solid fa-users-cog"></i> Personel Yönetimi</li>
+                <li id="logout-btn" class="menu-item logout-item">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cikis Yap
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <header class="main-header">
+                <h1>Personel Yönetimi</h1>
+            </header>
+            <div class="personnel-container">
+                <h2>Mevcut Personeller</h2>
+                <ul id="personnel-list" class="personnel-list"></ul>
+            </div>
+            <div class="personnel-container">
+                <h2>Yeni Personel Ekle</h2>
+                <form id="add-personnel-form" class="add-personnel-form">
+                    <input type="text" id="new-username" placeholder="Yeni Kullanıcı Adı" required>
+                    <input type="password" id="new-password" placeholder="Yeni Şifre" required>
+                    <button type="submit">Personel Ekle</button>
+                </form>
+                <p id="add-user-error" class="error-message"></p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/personel-yonetimi.js') }}"></script>
+</body>
+
+</html>

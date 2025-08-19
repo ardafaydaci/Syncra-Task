@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kanban Panosu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Proje Yonetimi</h2>
+            </div>
+            <ul class="menu-list">
+                <li class="menu-item" onclick="window.location.href='/yonetici'"><i class="fa-solid fa-list"></i> Liste Görünümü</li>
+                <li class="menu-item active"><i class="fa-solid fa-table-columns"></i> Pano Görünümü</li>
+                <li class="menu-item" onclick="window.location.href='/personel-yonetimi'"><i class="fa-solid fa-users-cog"></i> Personel Yönetimi</li>
+                <li id="logout-btn" class="menu-item logout-item">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cikis Yap
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <header class="main-header">
+                <h1>Kanban Panosu</h1>
+            </header>
+            <div class="kanban-board">
+                <div class="kanban-column" data-status="todo">
+                    <h2 class="column-title"><i class="fa-regular fa-lightbulb icon-todo"></i> YAPILACAK</h2>
+                    <div class="tasks-container" id="todo-tasks"></div>
+                </div>
+                <div class="kanban-column" data-status="inprogress">
+                    <h2 class="column-title"><i class="fa-solid fa-person-digging icon-inprogress"></i> YAPILIYOR</h2>
+                    <div class="tasks-container" id="inprogress-tasks"></div>
+                </div>
+                <div class="kanban-column" data-status="done">
+                    <h2 class="column-title"><i class="fa-solid fa-flag-checkered icon-done"></i> TAMAMLANDI</h2>
+                    <div class="tasks-container" id="done-tasks"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/kanban-script.js') }}"></script>
+</body>
+
+</html>
