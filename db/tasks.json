@@ -1,20 +1,37 @@
 [
     {
-        "id": 1,
-        "title": "Aylık raporu hazırla",
-        "description": "Temmuz ayı satış ve pazarlama raporları hazırlanacak.",
-        "assigned_to": 2,
-        "created_by": 1,
-        "due_date": "2025-08-30",
+        "id": 1755186767631,
+        "text": "Frontend arayüzünü Asana'ya benzet",
+        "dueDate": "2025-08-30",
+        "completed": false,
+        "assignedTo": 1755587931262,
+        "priority": "high",
+        "status": "inprogress",
+        "comments": [
+            {
+                "comment_id": 1755618317822,
+                "author_username": "admin",
+                "text": "yeah",
+                "timestamp": "2025-08-19T15:45:17.822597Z"
+            }
+        ]
+    },
+    {
+        "id": 1755186780121,
+        "text": "Kullanıcı rolleri için yetkilendirme yap",
+        "dueDate": "2025-09-05",
+        "completed": false,
+        "assignedTo": 4,
+        "priority": "normal",
         "status": "todo"
     },
     {
-        "id": 2,
-        "title": "Yeni web sitesi tasarımını tamamla",
-        "description": "Ana sayfa ve ürünler sayfası için tasarımlar yapılacak.",
-        "assigned_to": 2,
-        "created_by": 1,
-        "due_date": "2025-09-15",
-        "status": "in_progress"
+        "id": 1755186790121,
+        "text": "Veritabanı yedekleme script'ini hazırla",
+        "dueDate": "2025-08-20",
+        "completed": false,
+        "assignedTo": 1755587931262,
+        "priority": "high",
+        "status": "inprogress"
     }
 ]

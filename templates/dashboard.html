@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görev Paneli</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container" id="uygulama-ekrani">
+        <div class="header">
+            <!-- Kullanıcı adını backend'den gelen bilgiyle dolduruyoruz -->
+            <h1 id="karsilama-mesaji">Hoş Geldin, {{ session.username }}!</h1>
+            <a href="{{ url_for('logout') }}"><button id="cikis-butonu">Çıkış Yap</button></a>
+        </div>
+
+        <!-- YENİ GÖREV EKLEME FORMU (Şimdilik sadece görsel, sonra işlevsel yapacağız) -->
+        <form id="gorev-ekleme-formu">
+            <input type="text" id="gorev-input" placeholder="Yeni bir görev yazın..." required>
+            <button type="submit">Görevi Ekle</button>
+        </form>
+
+        <!-- GÖREV LİSTESİ -->
+        <h2>Görev Listesi</h2>
+        <ul id="gorev-listesi">
+            <!-- Görevleri backend'den gelen 'tasks' listesi ile dolduruyoruz -->
+            {% for task in tasks %}
+            <li class="gorev-satiri">
+                <span class="gorev-metni">{{ task.title }}</span>
+                <div class="task-meta">
+                    <span><strong>Atanan:</strong> {{ task.assigned_to_username }}</span>
+                    <span><strong>Durum:</strong> {{ task.status }}</span>
+                </div>
+                 <!-- Silme butonunu daha sonra işlevsel hale getireceğiz -->
+                <button class="sil-butonu">Sil</button>
+            </li>
+            {% else %}
+            <p style="text-align:center;">Gösterilecek görev bulunmuyor.</p>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- JavaScript dosyamızı bağlıyoruz -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
