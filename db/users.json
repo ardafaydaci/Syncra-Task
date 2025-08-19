@@ -1,14 +1,26 @@
 [
     {
         "id": 1,
-        "username": "patron",
-        "password": "123",
+        "username": "admin",
+        "password": "admin",
         "role": "admin"
     },
     {
         "id": 2,
-        "username": "personel1",
-        "password": "123",
+        "username": "yonetici",
+        "password": "yonetici123",
+        "role": "admin"
+    },
+    {
+        "id": 4,
+        "username": "Arda2",
+        "password": "1",
+        "role": "employee"
+    },
+    {
+        "id": 1755587931262,
+        "username": "Arda",
+        "password": "1",
         "role": "employee"
     }
 ]

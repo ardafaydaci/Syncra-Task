@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personel Gorev Paneli</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Proje Yonetimi</h2>
+            </div>
+            <ul class="menu-list">
+                <li class="menu-item active"><i class="fa-solid fa-list"></i> Görev Listem</li>
+                <li class="menu-item" onclick="window.location.href='/personel-kanban'"><i class="fa-solid fa-table-columns"></i> Görev Panom</li>
+                <li id="logout-btn" class="menu-item logout-item">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cikis Yap
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <header class="main-header">
+                <h1>Personel Gorev Paneli</h1>
+            </header>
+            <div class="task-list-container">
+                <h2>Bana Atanan Gorevler</h2>
+                <ul id="task-list">
+                    <!-- JavaScript görevleri buraya dinamik olarak ekleyecek -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- YÖNETİCİ SAYFASINDAN KOPYALANAN GÖREV DETAY MODAL'I -->
+    <div id="task-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-task-title">Görev Başlığı</h2>
+                <button id="modal-close-btn" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Atanan:</strong> <span id="modal-assigned-user"></span></p>
+                <p><strong>Son Teslim Tarihi:</strong> <span id="modal-due-date"></span></p>
+
+                <hr>
+
+                <h4>Açıklama</h4>
+                <p id="modal-task-description">Bu görev için henüz bir açıklama girilmemiş.</p>
+
+                <hr>
+
+                <h4>Dosyalar</h4>
+                <div id="modal-files-list" class="files-container">
+                    <!-- Dosyalar JavaScript ile buraya eklenecek -->
+                </div>
+                <div class="file-upload-container">
+                    <input type="file" id="modal-file-input">
+                    <button id="modal-upload-btn">Dosya Yükle</button>
+                </div>
+
+                <hr>
+
+                <h4>Yorumlar</h4>
+                <div id="modal-comments-list" class="comments-container">
+                    <!-- Yorumlar JavaScript ile buraya eklenecek -->
+                </div>
+                <div class="comment-form-container">
+                    <textarea id="modal-comment-input" placeholder="Bir yorum ekle..."></textarea>
+                    <button id="modal-add-comment-btn">Yorum Yap</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/gorev-script.js') }}"></script>
+</body>
+
+</html>

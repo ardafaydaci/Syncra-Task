@@ -2,31 +2,27 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Görev Yönetimi</title>
+    <title>Giriş Yap - Proje Yonetimi</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Görevler</h1>
-    </header>
-    <main>
-        <div class="task-container">
-            <!-- Flask'ten gelen görevler burada döngü ile listelenecek -->
-            {% for task in tasks %}
-            <div class="task-card">
-                <h3>{{ task.title }}</h3>
-                <p>{{ task.description }}</p>
-                <div class="task-meta">
-                    <span><strong>Atanan:</strong> {{ task.assigned_to_username }}</span>
-                    <span><strong>Son Tarih:</strong> {{ task.due_date }}</span>
-                    <span><strong>Durum:</strong> {{ task.status }}</span>
-                </div>
+    <div class="login-container">
+        <form id="login-form" class="login-form">
+            <h2>Giriş Yap</h2>
+            <p>Lütfen bilgilerinizi girin.</p>
+            <div class="input-group">
+                <label for="username">Kullanici Adi</label>
+                <input type="text" id="username" name="username" required>
             </div>
-            {% else %}
-            <p>Gösterilecek görev bulunamadı.</p>
-            {% endfor %}
-        </div>
-    </main>
+            <div class="input-group">
+                <label for="password">Sifre</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">Giris Yap</button>
+            <p id="error-message" class="error-message"></p>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 </body>
 </html>

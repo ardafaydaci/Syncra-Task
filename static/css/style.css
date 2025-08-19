@@ -1,0 +1,648 @@
+/* MEVCUT STİLLERİNİZİN TAMAMI BURADA OLDUĞUNU VARSAYIYORUZ */
+
+
+/* AŞAĞIDAKİ KODLARI MEVCUT CSS DOSYANIZIN EN SONUNA EKLEYİN */
+
+
+/* RENK PALETI (Acik Mavi, Beyaz, Yesil) */
+
+:root {
+    --primary-bg: #f0f4f8;
+    --secondary-bg: #ffffff;
+    --sidebar-bg: #ffffff;
+    --primary-accent: #3498db;
+    --success-color: #2ecc71;
+    --text-color: #34495e;
+    --light-gray: #bdc3c7;
+    --border-color: #ecf0f1;
+    --completed-text: #95a5a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    width: 90vw;
+    height: 90vh;
+    max-width: 1400px;
+    background-color: var(--secondary-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: var(--text-color);
+    width: 240px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--primary-accent);
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-item {
+    padding: 15px 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 600;
+}
+
+.menu-item i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.menu-item.active {
+    background-color: var(--primary-accent);
+    color: white;
+}
+
+.menu-item:hover:not(.active) {
+    background-color: var(--primary-bg);
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.main-header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.task-list-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.add-task-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#task-input,
+#due-date-input {
+    padding: 12px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#task-input {
+    flex-grow: 1;
+}
+
+#task-input:focus,
+#due-date-input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+#add-task-btn {
+    background-color: var(--primary-accent);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-task-btn:hover {
+    background-color: #2980b9;
+}
+
+.task-list-container {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.task-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 3px solid var(--primary-accent);
+    padding-left: 13px;
+}
+
+.task-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--success-color);
+}
+
+.task-status {
+    color: var(--light-gray);
+    font-size: 1.2rem;
+}
+
+.task-item.completed .task-status {
+    color: var(--success-color);
+}
+
+.task-item.completed {
+    background-color: #fdfdfd;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: var(--completed-text);
+}
+
+.task-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.due-date {
+    font-size: 0.9rem;
+    color: #84817a;
+    background-color: var(--primary-bg);
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.delete-btn,
+.edit-btn {
+    background: none;
+    border: none;
+    color: var(--light-gray);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    z-index: 10;
+}
+
+.delete-btn:hover {
+    color: #e74c3c;
+}
+
+.edit-btn:hover {
+    color: var(--primary-accent);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-bg);
+}
+
+.login-form {
+    background-color: var(--secondary-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-form h2 {
+    color: var(--primary-accent);
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    margin-bottom: 30px;
+    color: var(--completed-text);
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-top: 15px;
+    font-weight: 600;
+    display: none;
+}
+
+.logout-item {
+    margin-top: auto;
+    border-top: 1px solid var(--border-color);
+}
+
+.logout-item:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#assign-to-select {
+    padding: 12px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.task-item.editing .task-info {
+    width: 100%;
+}
+
+.edit-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid var(--primary-accent);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.edit-date {
+    padding: 8px;
+    border: 1px solid var(--primary-accent);
+    border-radius: 5px;
+}
+
+.edit-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn-action {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.save-btn {
+    background-color: var(--success-color);
+}
+
+.cancel-btn {
+    background-color: var(--light-gray);
+}
+
+#priority-select {
+    padding: 12px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.priority-tag {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+
+.priority-high {
+    background-color: #e74c3c;
+}
+
+.priority-normal {
+    background-color: #3498db;
+}
+
+.priority-low {
+    background-color: #f1c40f;
+    color: #34495e;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+.kanban-column {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--primary-bg);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+}
+
+.column-title .icon-todo {
+    color: #3498db;
+}
+
+.column-title .icon-inprogress {
+    color: #f1c40f;
+}
+
+.column-title .icon-done {
+    color: #2ecc71;
+}
+
+.tasks-container {
+    flex-grow: 1;
+    min-height: 100px;
+    padding-bottom: 10px;
+}
+
+.task-card {
+    background-color: var(--secondary-bg);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: grab;
+    border-left: 4px solid var(--light-gray);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-card.dragging {
+    opacity: 0.5;
+    transform: rotate(2deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.task-card-text {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.task-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assigned-user-badge {
+    width: 28px;
+    height: 28px;
+    background-color: var(--primary-accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* --- GÖREV DETAY MODAL (YENİ EKLENEN) --- */
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--light-gray);
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: var(--text-color);
+}
+
+.modal-body {
+    overflow-y: auto;
+    padding-right: 10px;
+    /* for scrollbar */
+}
+
+.modal-body h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--primary-accent);
+}
+
+.modal-body hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+
+/* Yorumlar Bölümü */
+
+.comments-container {
+    margin-bottom: 20px;
+}
+
+.comment-item {
+    background-color: var(--primary-bg);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--primary-accent);
+}
+
+.comment-author {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: var(--completed-text);
+    margin-left: 5px;
+}
+
+.comment-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dfe4ea;
+    min-height: 70px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.comment-form-container button,
+.file-upload-container button {
+    background-color: var(--primary-accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.comment-form-container button:hover,
+.file-upload-container button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Dosya Yükleme Bölümü */
+
+.files-container {
+    margin-bottom: 15px;
+}
+
+.file-item a {
+    display: block;
+    padding: 8px;
+    background-color: var(--primary-bg);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--primary-accent);
+    font-weight: 600;
+}
+
+.file-item a:hover {
+    text-decoration: underline;
+}
+
+.file-upload-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
