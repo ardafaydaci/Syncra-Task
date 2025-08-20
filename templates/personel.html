@@ -15,9 +15,19 @@
             <div class="sidebar-header">
                 <h2>Proje Yonetimi</h2>
             </div>
+            <div class="notification-area">
+                <div id="notification-bell" class="menu-item">
+                    <i class="fa-solid fa-bell"></i>
+                    <span>Bildirimler</span>
+                    <span id="notification-counter" class="notification-counter" style="display: none;">0</span>
+                </div>
+                <div id="notification-dropdown" class="notification-dropdown" style="display: none;"></div>
+            </div>
+            <!-- GÜNCELLENMİŞ MENÜ -->
             <ul class="menu-list">
-                <li class="menu-item active"><i class="fa-solid fa-list"></i> Görev Listem</li>
+                <li class="menu-item active" onclick="window.location.href='/personel'"><i class="fa-solid fa-list"></i> Görev Listem</li>
                 <li class="menu-item" onclick="window.location.href='/personel-kanban'"><i class="fa-solid fa-table-columns"></i> Görev Panom</li>
+                <li class="menu-item" onclick="window.location.href='/takvim'"><i class="fa-solid fa-calendar-days"></i> Takvimim</li>
                 <li id="logout-btn" class="menu-item logout-item">
                     <i class="fa-solid fa-right-from-bracket"></i> Cikis Yap
                 </li>
@@ -29,46 +39,35 @@
             </header>
             <div class="task-list-container">
                 <h2>Bana Atanan Gorevler</h2>
-                <ul id="task-list">
-                    <!-- JavaScript görevleri buraya dinamik olarak ekleyecek -->
-                </ul>
+                <ul id="task-list"></ul>
             </div>
         </div>
     </div>
 
-    <!-- YÖNETİCİ SAYFASINDAN KOPYALANAN GÖREV DETAY MODAL'I -->
     <div id="task-modal" class="modal-backdrop" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modal-task-title">Görev Başlığı</h2>
+                <h2 id="modal-task-title">Görev Detayları</h2>
                 <button id="modal-close-btn" class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
+                <p id="modal-task-text-body" class="modal-task-main-text"></p>
                 <p><strong>Atanan:</strong> <span id="modal-assigned-user"></span></p>
+                <p><strong>Verildiği Tarih:</strong> <span id="modal-creation-date"></span></p>
                 <p><strong>Son Teslim Tarihi:</strong> <span id="modal-due-date"></span></p>
-
                 <hr>
-
                 <h4>Açıklama</h4>
-                <p id="modal-task-description">Bu görev için henüz bir açıklama girilmemiş.</p>
-
+                <p id="modal-task-description">...</p>
                 <hr>
-
                 <h4>Dosyalar</h4>
-                <div id="modal-files-list" class="files-container">
-                    <!-- Dosyalar JavaScript ile buraya eklenecek -->
-                </div>
+                <div id="modal-files-list" class="files-container"></div>
                 <div class="file-upload-container">
                     <input type="file" id="modal-file-input">
                     <button id="modal-upload-btn">Dosya Yükle</button>
                 </div>
-
                 <hr>
-
                 <h4>Yorumlar</h4>
-                <div id="modal-comments-list" class="comments-container">
-                    <!-- Yorumlar JavaScript ile buraya eklenecek -->
-                </div>
+                <div id="modal-comments-list" class="comments-container"></div>
                 <div class="comment-form-container">
                     <textarea id="modal-comment-input" placeholder="Bir yorum ekle..."></textarea>
                     <button id="modal-add-comment-btn">Yorum Yap</button>

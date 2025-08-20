@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const data = await response.json();
         if (response.ok) {
-            window.location.href = data.role === 'admin' ? '/yonetici' : '/personel';
+            window.location.href = data.redirect_url;
         } else {
             const errorMessage = document.getElementById('error-message');
             errorMessage.textContent = data.message || 'Bir hata oluştu.';

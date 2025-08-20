@@ -3,10 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Yonetici Paneli</title>
+    <title>Görev Takvimi</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+
+    <style>
+        /* Takvimin görev metinlerini daha okunaklı yapalım */
+        
+        .fc-event-title {
+            white-space: normal !important;
+            overflow-wrap: break-word;
+            font-weight: 600;
+        }
+        
+        .fc-daygrid-event {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,6 +32,7 @@
             <div class="sidebar-header">
                 <h2>Proje Yonetimi</h2>
             </div>
+
             <div class="notification-area">
                 <div id="notification-bell" class="menu-item">
                     <i class="fa-solid fa-bell"></i>
@@ -23,42 +41,21 @@
                 </div>
                 <div id="notification-dropdown" class="notification-dropdown" style="display: none;"></div>
             </div>
-            <ul class="menu-list">
-                <li class="menu-item" onclick="window.location.href='/dashboard'"><i class="fa-solid fa-chart-pie"></i> Dashboard</li>
-                <li class="menu-item active" onclick="window.location.href='/yonetici'"><i class="fa-solid fa-list"></i> Liste Görünümü</li>
-                <li class="menu-item" onclick="window.location.href='/kanban'"><i class="fa-solid fa-table-columns"></i> Pano Görünümü</li>
-                <li class="menu-item" onclick="window.location.href='/takvim'"><i class="fa-solid fa-calendar-days"></i> Takvim</li>
-                <li class="menu-item" onclick="window.location.href='/personel-yonetimi'"><i class="fa-solid fa-users-cog"></i> Personel Yönetimi</li>
-                <li class="menu-item" onclick="window.location.href='/personnel-performance'"><i class="fa-solid fa-user-check"></i> Personel Performansı</li>
-                <li id="logout-btn" class="menu-item logout-item">
-                    <i class="fa-solid fa-right-from-bracket"></i> Cikis Yap
-                </li>
-            </ul>
+
+            <!-- Menü JS ile dinamik olarak yüklenecek -->
+            <ul id="sidebar-menu" class="menu-list"></ul>
         </div>
+
         <div class="main-content">
             <header class="main-header">
-                <h1>Yonetici Paneli - Gorev Atama</h1>
+                <h1>Görev Takvimi</h1>
             </header>
-            <div id="add-task-container" class="add-task-container">
-                <input type="text" id="task-input" placeholder="Yeni bir gorev tanimlayin...">
-                <input type="date" id="due-date-input">
-                <select id="priority-select">
-                    <option value="normal">Normal Öncelik</option>
-                    <option value="high">Yüksek Öncelik</option>
-                    <option value="low">Düşük Öncelik</option>
-                </select>
-                <select id="assign-to-select">
-                    <option value="">Personel Secin</option>
-                </select>
-                <button id="add-task-btn">Gorev Ekle</button>
-            </div>
-            <div class="task-list-container">
-                <h2>Aktif Gorevler</h2>
-                <ul id="task-list"></ul>
-            </div>
+
+            <div id='calendar'></div>
         </div>
     </div>
 
+    <!-- Görev Detay Modalı -->
     <div id="task-modal" class="modal-backdrop" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
@@ -91,7 +88,11 @@
         </div>
     </div>
 
-    <script src="{{ url_for('static', filename='js/gorev-script.js') }}"></script>
+    <!-- FullCalendar JS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/tr.js'></script>
+
+    <script src="{{ url_for('static', filename='js/takvim-script.js') }}"></script>
 </body>
 
 </html>

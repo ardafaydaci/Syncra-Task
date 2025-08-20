@@ -2,36 +2,522 @@
     {
         "id": 1755186767631,
         "text": "Frontend arayüzünü Asana'ya benzet",
+        "description": "Asana'daki kart yapısı, renkler ve genel yerleşim düzeni referans alınacak.",
         "dueDate": "2025-08-30",
         "completed": false,
-        "assignedTo": 1755587931262,
+        "assignedTo": 4,
         "priority": "high",
-        "status": "inprogress",
-        "comments": [
+        "status": "todo",
+        "comments": [],
+        "files": [],
+        "creationDate": "2025-08-14T10:00:00Z",
+        "completionDate": null,
+        "history": [
             {
-                "comment_id": 1755618317822,
-                "author_username": "admin",
-                "text": "yeah",
-                "timestamp": "2025-08-19T15:45:17.822597Z"
+                "status": "todo",
+                "timestamp": "2025-08-14T10:00:00Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-15T11:30:00Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T09:07:18.854833Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T13:00:51.413197Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T13:21:29.199866Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:02:26.811902Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:02:27.479228Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:02:32.117500Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:02:32.686293Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:38:20.012595Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:38:34.111611Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:39:24.763666Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:40:10.375196Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:40:15.309799Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:53:41.880904Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:58:16.214411Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:58:17.378932Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:58:27.471738Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:54:47.188040Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:56:59.717957Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:58:44.646184Z"
             }
         ]
     },
     {
         "id": 1755186780121,
         "text": "Kullanıcı rolleri için yetkilendirme yap",
+        "description": "",
         "dueDate": "2025-09-05",
         "completed": false,
-        "assignedTo": 4,
+        "assignedTo": 1755587931262,
         "priority": "normal",
-        "status": "todo"
+        "status": "inprogress",
+        "comments": [],
+        "files": [],
+        "creationDate": "2025-08-15T11:00:00Z",
+        "completionDate": null,
+        "history": [
+            {
+                "status": "todo",
+                "timestamp": "2025-08-15T11:00:00Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-17T16:45:00Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:02:28.566708Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:02:31.125629Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:39:26.277492Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:40:16.213975Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:44:05.413533Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:44:05.884691Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:53:29.321163Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:53:42.985561Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:58:18.277294Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:57:32.848094Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:57:44.252794Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:57:47.832329Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:57:51.169310Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:57:58.038070Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:58:13.729730Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:58:15.935753Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:58:45.270613Z"
+            }
+        ]
     },
     {
         "id": 1755186790121,
         "text": "Veritabanı yedekleme script'ini hazırla",
-        "dueDate": "2025-08-20",
-        "completed": false,
-        "assignedTo": 1755587931262,
+        "description": "",
+        "dueDate": "2025-08-18",
+        "completed": true,
+        "assignedTo": 4,
         "priority": "high",
-        "status": "inprogress"
+        "status": "done",
+        "comments": [
+            {
+                "comment_id": 1755716166186,
+                "author_username": "yonetici",
+                "text": "deneme",
+                "timestamp": "2025-08-20T18:56:06.186145Z"
+            },
+            {
+                "comment_id": 1755716207587,
+                "author_username": "Berk",
+                "text": "denem2",
+                "timestamp": "2025-08-20T18:56:47.587209Z"
+            }
+        ],
+        "files": [],
+        "creationDate": "2025-08-16T12:00:00Z",
+        "completionDate": "2025-08-20T18:56:51.678878Z",
+        "history": [
+            {
+                "status": "todo",
+                "timestamp": "2025-08-16T12:00:00Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T09:07:17.424904Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T09:07:18.130356Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:02:29.632635Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:02:30.334106Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:26:27.765211Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:26:28.464558Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:26:48.508088Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:38:21.109991Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:38:34.731426Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:40:08.813366Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:44:04.324906Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:44:04.862714Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:50:08.577616Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:53:28.153892Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:53:44.026364Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T14:58:22.308844Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:50:37.230853Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:54:09.350747Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:54:11.103852Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:54:22.153854Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:54:26.609009Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:54:28.163522Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:54:45.176238Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:54:45.971893Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:55:06.386485Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:57:00.708252Z"
+            }
+        ]
+    },
+    {
+        "text": "çöpleri at",
+        "dueDate": "2025-08-20",
+        "assignedTo": 1755587931262,
+        "priority": "normal",
+        "status": "done",
+        "id": 1755700087142,
+        "description": "",
+        "comments": [],
+        "files": [],
+        "creationDate": "2025-08-20T14:28:07.142394Z",
+        "completionDate": "2025-08-20T18:58:42.216294Z",
+        "history": [
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:28:07.142394Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:37:10.715116Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:40:09.610044Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:40:17.302593Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:53:44.972571Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:58:20.446189Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T15:42:22.071028Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T15:42:22.677595Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:57:32.246361Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:57:45.774875Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:57:48.671652Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:57:51.985821Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:57:58.799188Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:58:42.216294Z"
+            }
+        ],
+        "completed": true
+    },
+    {
+        "text": "berke selam ver",
+        "dueDate": "2025-08-20",
+        "assignedTo": 4,
+        "priority": "normal",
+        "status": "todo",
+        "id": 1755701123457,
+        "description": "",
+        "comments": [],
+        "files": [],
+        "creationDate": "2025-08-20T14:45:23.457061Z",
+        "completionDate": null,
+        "history": [
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:45:23.457061Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T14:45:44.369768Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T14:53:45.869728Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:50:33.995024Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:50:36.522532Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:50:44.443151Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:51:02.030114Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:51:04.328604Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:57:01.435324Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:58:46.633520Z"
+            }
+        ],
+        "completed": false
+    },
+    {
+        "text": "filtre kahve yap",
+        "dueDate": "2025-08-19",
+        "assignedTo": 1755587931262,
+        "priority": "normal",
+        "status": "inprogress",
+        "id": 1755715789611,
+        "description": "",
+        "comments": [],
+        "files": [],
+        "creationDate": "2025-08-20T18:49:49.611627Z",
+        "completionDate": null,
+        "history": [
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:49:49.611627Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:54:27.572612Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:54:28.881314Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:55:07.632465Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:57:31.475486Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:57:52.907350Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:57:57.321511Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:58:03.710988Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:58:05.910811Z"
+            },
+            {
+                "status": "todo",
+                "timestamp": "2025-08-20T18:58:08.179481Z"
+            },
+            {
+                "status": "done",
+                "timestamp": "2025-08-20T18:58:41.083080Z"
+            },
+            {
+                "status": "inprogress",
+                "timestamp": "2025-08-20T18:58:47.380461Z"
+            }
+        ],
+        "completed": false
     }
 ]
