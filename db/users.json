@@ -8,18 +8,36 @@
     {
         "id": 2,
         "username": "yonetici",
-        "password": "yonetici123",
+        "password": "1",
         "role": "admin"
     },
     {
         "id": 4,
-        "username": "Arda2",
+        "username": "Berk",
         "password": "1",
         "role": "employee"
     },
     {
         "id": 1755587931262,
         "username": "Arda",
+        "password": "1",
+        "role": "employee"
+    },
+    {
+        "id": 1755716372053,
+        "username": "Begüm",
+        "password": "1",
+        "role": "employee"
+    },
+    {
+        "id": 1755716379523,
+        "username": "Murat",
+        "password": "1",
+        "role": "employee"
+    },
+    {
+        "id": 1755716385348,
+        "username": "Can",
         "password": "1",
         "role": "employee"
     }

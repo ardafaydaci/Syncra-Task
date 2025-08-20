@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1755699910346,
+        "user_id": 1755587931262,
+        "task_id": 1755699910345,
+        "message": "Size yeni bir görev atandı: 'sdasd'",
+        "read": true,
+        "timestamp": "2025-08-20T14:25:10.346416Z"
+    },
+    {
+        "id": 1755700087143,
+        "user_id": 1755587931262,
+        "task_id": 1755700087142,
+        "message": "Size yeni bir görev atandı: 'çöpleri at'",
+        "read": true,
+        "timestamp": "2025-08-20T14:28:07.143374Z"
+    },
+    {
+        "id": 1755701123458,
+        "user_id": 1755587931262,
+        "task_id": 1755701123457,
+        "message": "Size yeni bir görev atandı: 'berke selam ver'",
+        "read": true,
+        "timestamp": "2025-08-20T14:45:23.458560Z"
+    },
+    {
+        "id": 1755715789613,
+        "user_id": 1755587931262,
+        "task_id": 1755715789611,
+        "message": "Size yeni bir görev atandı: 'filtre kahve yap'",
+        "read": true,
+        "timestamp": "2025-08-20T18:49:49.613661Z"
+    },
+    {
+        "id": 1755716166187,
+        "user_id": 4,
+        "task_id": 1755186790121,
+        "message": "'yonetici' kullanıcısı 'Veritabanı yedekleme script'ini hazırla' görevine bir yorum yaptı.",
+        "read": true,
+        "timestamp": "2025-08-20T18:56:06.186145Z"
+    }
+]

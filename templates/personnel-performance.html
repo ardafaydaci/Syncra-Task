@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personel Performans Analizi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Proje Yonetimi</h2>
+            </div>
+            <div class="notification-area">
+                <div id="notification-bell" class="menu-item">
+                    <i class="fa-solid fa-bell"></i>
+                    <span>Bildirimler</span>
+                    <span id="notification-counter" class="notification-counter" style="display: none;">0</span>
+                </div>
+                <div id="notification-dropdown" class="notification-dropdown" style="display: none;"></div>
+            </div>
+            <ul class="menu-list">
+                <li class="menu-item" onclick="window.location.href='/dashboard'"><i class="fa-solid fa-chart-pie"></i> Dashboard</li>
+                <li class="menu-item" onclick="window.location.href='/yonetici'"><i class="fa-solid fa-list"></i> Liste Görünümü</li>
+                <li class="menu-item" onclick="window.location.href='/kanban'"><i class="fa-solid fa-table-columns"></i> Pano Görünümü</li>
+                <li class="menu-item" onclick="window.location.href='/takvim'"><i class="fa-solid fa-calendar-days"></i> Takvim</li>
+                <li class="menu-item" onclick="window.location.href='/personel-yonetimi'"><i class="fa-solid fa-users-cog"></i> Personel Yönetimi</li>
+                <li class="menu-item active" onclick="window.location.href='/personnel-performance'"><i class="fa-solid fa-user-check"></i> Personel Performansı</li>
+                <li id="logout-btn" class="menu-item logout-item">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cikis Yap
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <header class="main-header">
+                <h1>Personel Performans Analizi</h1>
+            </header>
+
+            <div class="performance-layout">
+                <div class="personnel-selection-panel">
+                    <h3>Personeller</h3>
+                    <ul id="performance-personnel-list">
+                        <!-- JS ile doldurulacak -->
+                    </ul>
+                </div>
+
+                <div class="stats-display-panel">
+                    <div id="stats-welcome-message">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <p>Analizini görmek için soldaki listeden bir personel seçin.</p>
+                    </div>
+
+                    <div id="stats-content-area" class="hidden">
+                        <h2 id="selected-personnel-name"></h2>
+                        <div class="performance-stats">
+                            <div class="stat-card perf-card">
+                                <i class="fa-solid fa-list-check"></i>
+                                <div class="stat-info">
+                                    <h2 id="stats-completed-rate">0%</h2>
+                                    <p>Tamamlama Oranı</p>
+                                    <small id="stats-completed-count">0/0 Görev</small>
+                                </div>
+                            </div>
+                            <div class="stat-card perf-card">
+                                <i class="fa-solid fa-calendar-check" style="color: var(--success-color);"></i>
+                                <div class="stat-info">
+                                    <h2 id="stats-ontime-rate">0%</h2>
+                                    <p>Zamanında Teslim</p>
+                                    <small id="stats-ontime-count">0/0 Görev</small>
+                                </div>
+                            </div>
+                            <div class="stat-card perf-card">
+                                <i class="fa-solid fa-fire" style="color: #e74c3c;"></i>
+                                <div class="stat-info">
+                                    <h2 id="stats-overdue-count">0</h2>
+                                    <p>Gecikmiş Görev</p>
+                                </div>
+                            </div>
+                            <div class="stat-card perf-card">
+                                <i class="fa-solid fa-person-digging" style="color: #f1c40f;"></i>
+                                <div class="stat-info">
+                                    <h2 id="stats-inprogress-count">0</h2>
+                                    <p>Devam Eden</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recent-tasks-container">
+                            <h2>Son Atanan Görevler</h2>
+                            <ul id="personnel-recent-tasks-list">
+                                <!-- JS ile doldurulacak -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/personnel-performance.js') }}"></script>
+</body>
+
+</html>
