@@ -1,0 +1,46 @@
+<div id="task-modal" class="modal-backdrop" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modal-task-title">Görev Detayları</h2>
+            <button id="modal-close-btn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p id="modal-task-text-body" class="modal-task-main-text"></p>
+            <p><strong>Atanan:</strong> <span id="modal-assigned-user"></span></p>
+            <p><strong>Verildiği Tarih:</strong> <span id="modal-creation-date"></span></p>
+            <p><strong>Son Teslim Tarihi:</strong> <span id="modal-due-date"></span></p>
+            <hr>
+            <div class="modal-description-section">
+                <h4>Açıklama <button id="edit-description-btn" class="control-btn" title="Açıklamayı Düzenle" style="display: none;"><i class="fa-solid fa-pencil"></i></button></h4>
+                <div id="description-view">
+                    <p id="modal-task-description">...</p>
+                </div>
+                <div id="description-edit-view" style="display: none;">
+                    <textarea id="modal-description-edit-input" class="comment-edit-input"></textarea>
+                    <div class="comment-edit-actions">
+                        <button id="save-description-btn" class="comment-save-btn">Kaydet</button>
+                        <button id="cancel-description-btn" class="comment-cancel-btn">İptal</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h4>Dosyalar</h4>
+            <div id="modal-files-list" class="files-container"></div>
+            <div class="file-upload-container">
+                <input type="file" id="modal-file-input">
+                <button id="modal-upload-btn">Dosya Yükle</button>
+            </div>
+            <hr>
+            <h4>Yorumlar</h4>
+            <div id="modal-comments-list" class="comments-container"></div>
+            <div class="comment-form-container">
+                <textarea id="modal-comment-input" placeholder="Bir yorum ekle..."></textarea>
+                <button id="modal-add-comment-btn">Yorum Yap</button>
+            </div>
+            <div class="activity-log-container">
+                <h4>Görev Geçmişi</h4>
+                <ul id="modal-activity-log"></ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Kanban Panosu</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
@@ -15,10 +16,36 @@
             <div class="sidebar-header">
                 <h2>Proje Yonetimi</h2>
             </div>
+
+            <div class="sidebar-user-profile">
+                <img src="{{ url_for('static', filename='profile_pics/' + profile_picture) if profile_picture else url_for('static', filename='default_avatar.png') }}" alt="Profil Resmi" class="sidebar-profile-pic">
+                <span class="sidebar-username">{{ session.username }}</span>
+            </div>
+
             <ul class="menu-list">
+                <li class="notification-area">
+                    <div id="notification-bell" class="menu-item">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Bildirimler</span>
+                        <span id="notification-counter" class="notification-counter" style="display: none;">0</span>
+                    </div>
+                    <div id="notification-dropdown" class="notification-dropdown" style="display: none;"></div>
+                </li>
+                <li class="menu-item" onclick="window.location.href='/dashboard'"><i class="fa-solid fa-chart-pie"></i> Dashboard</li>
+                <li id="team-menu-trigger" class="menu-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Takım Üyeleri</span>
+                </li>
                 <li class="menu-item" onclick="window.location.href='/yonetici'"><i class="fa-solid fa-list"></i> Liste Görünümü</li>
-                <li class="menu-item active"><i class="fa-solid fa-table-columns"></i> Pano Görünümü</li>
+                <li class="menu-item active" onclick="window.location.href='/kanban'"><i class="fa-solid fa-table-columns"></i> Pano Görünümü</li>
+                <li class="menu-item" onclick="window.location.href='/takvim'"><i class="fa-solid fa-calendar-days"></i> Takvim</li>
                 <li class="menu-item" onclick="window.location.href='/personel-yonetimi'"><i class="fa-solid fa-users-cog"></i> Personel Yönetimi</li>
+                <li class="menu-item" onclick="window.location.href='/personnel-performance'"><i class="fa-solid fa-user-check"></i> Personel Performansı</li>
+
+                <li id="settings-btn" class="menu-item">
+                    <i class="fa-solid fa-cog"></i>
+                    <span>Ayarlar</span>
+                </li>
                 <li id="logout-btn" class="menu-item logout-item">
                     <i class="fa-solid fa-right-from-bracket"></i> Cikis Yap
                 </li>
@@ -44,6 +71,13 @@
             </div>
         </div>
     </div>
+
+    {% include '_task_modal.html' %} {% include '_settings_modal.html' %} {% include '_user_card_modal.html' %} {% include '_team_panel.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="{{ url_for('static', filename='js/settings-modal.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme-switcher.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/team-sidebar.js') }}"></script>
     <script src="{{ url_for('static', filename='js/kanban-script.js') }}"></script>
 </body>
 
