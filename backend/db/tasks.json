@@ -1,0 +1,208 @@
+[
+    {
+        "text": "deneme",
+        "description": "",
+        "dueDate": "2025-08-29",
+        "assignedTo": [
+            1756111816188
+        ],
+        "priority": "high",
+        "depends_on": [],
+        "status": "done",
+        "id": 1756458313444,
+        "comments": [
+            {
+                "comment_id": 1757321316943,
+                "author_username": "yonetici",
+                "text": "deneme",
+                "timestamp": "2025-09-08T08:48:36.944755Z"
+            },
+            {
+                "comment_id": 1757339551573,
+                "author_username": "Arda",
+                "text": "yanıt 1",
+                "timestamp": "2025-09-08T13:52:31.574072Z"
+            },
+            {
+                "comment_id": 1757340123871,
+                "author_username": "yonetici",
+                "text": "czczxcxzc",
+                "timestamp": "2025-09-08T14:02:03.872136Z"
+            },
+            {
+                "comment_id": 1757340146941,
+                "author_username": "Arda",
+                "text": "addsvvcv",
+                "timestamp": "2025-09-08T14:02:26.941420Z"
+            }
+        ],
+        "files": [],
+        "creationDate": "2025-08-29T09:05:13.444060Z",
+        "completionDate": "2025-09-08T08:54:18.144049Z",
+        "activity_log": [
+            {
+                "timestamp": "2025-08-29T09:05:13.444203Z",
+                "user": "yonetici",
+                "action": "görevi oluşturdu."
+            },
+            {
+                "timestamp": "2025-08-29T09:05:45.061229Z",
+                "user": "yonetici",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-09-08T08:48:36.944993Z",
+                "user": "yonetici",
+                "action": "yeni bir yorum ekledi."
+            },
+            {
+                "timestamp": "2025-09-08T08:54:18.144106Z",
+                "user": "yonetici",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-09-08T13:52:31.574190Z",
+                "user": "Arda",
+                "action": "yeni bir yorum ekledi."
+            },
+            {
+                "timestamp": "2025-09-08T14:02:03.872244Z",
+                "user": "yonetici",
+                "action": "yeni bir yorum ekledi."
+            },
+            {
+                "timestamp": "2025-09-08T14:02:26.941461Z",
+                "user": "Arda",
+                "action": "yeni bir yorum ekledi."
+            }
+        ],
+        "completed": true
+    },
+    {
+        "text": "deneme",
+        "description": "",
+        "dueDate": "2025-08-28",
+        "assignedTo": [
+            1756111816188
+        ],
+        "priority": "normal",
+        "depends_on": [],
+        "status": "done",
+        "id": 1756458326402,
+        "comments": [],
+        "files": [],
+        "creationDate": "2025-08-29T09:05:26.402670Z",
+        "completionDate": "2025-08-29T09:10:06.900800Z",
+        "activity_log": [
+            {
+                "timestamp": "2025-08-29T09:05:26.402688Z",
+                "user": "yonetici",
+                "action": "görevi oluşturdu."
+            },
+            {
+                "timestamp": "2025-08-29T09:09:59.661214Z",
+                "user": "Arda",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-08-29T09:10:00.379998Z",
+                "user": "Arda",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-08-29T09:10:00.903259Z",
+                "user": "Arda",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-08-29T09:10:01.646713Z",
+                "user": "Arda",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-08-29T09:10:04.582167Z",
+                "user": "Arda",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-08-29T09:10:06.900808Z",
+                "user": "Arda",
+                "action": "görevi tamamladı."
+            }
+        ],
+        "completed": true
+    },
+    {
+        "text": "deneme",
+        "description": "",
+        "dueDate": "2025-08-29",
+        "assignedTo": [
+            1756111816188
+        ],
+        "priority": "low",
+        "depends_on": [],
+        "status": "done",
+        "id": 1756458336923,
+        "comments": [],
+        "files": [],
+        "creationDate": "2025-08-29T09:05:36.923628Z",
+        "completionDate": "2025-09-08T14:48:25.002722Z",
+        "activity_log": [
+            {
+                "timestamp": "2025-08-29T09:05:36.923646Z",
+                "user": "yonetici",
+                "action": "görevi oluşturdu."
+            },
+            {
+                "timestamp": "2025-08-29T09:08:48.686153Z",
+                "user": "yonetici",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-08-29T09:08:50.211743Z",
+                "user": "yonetici",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-08-29T09:08:52.043663Z",
+                "user": "yonetici",
+                "action": "görevi tamamladı."
+            },
+            {
+                "timestamp": "2025-09-08T14:48:25.002829Z",
+                "user": "Arda",
+                "action": "görevi tamamladı."
+            }
+        ],
+        "completed": true
+    },
+    {
+        "text": "ddsfdf",
+        "description": "",
+        "dueDate": "2626-12-05",
+        "assignedTo": [
+            1756111816188
+        ],
+        "priority": "normal",
+        "depends_on": [],
+        "status": "done",
+        "id": 1757321672953,
+        "comments": [],
+        "files": [],
+        "creationDate": "2025-09-08T08:54:32.953804Z",
+        "completionDate": "2025-09-08T08:54:35.946671Z",
+        "activity_log": [
+            {
+                "timestamp": "2025-09-08T08:54:32.953855Z",
+                "user": "yonetici",
+                "action": "görevi oluşturdu."
+            },
+            {
+                "timestamp": "2025-09-08T08:54:35.946681Z",
+                "user": "yonetici",
+                "action": "görevi tamamladı."
+            }
+        ],
+        "completed": true
+    }
+]

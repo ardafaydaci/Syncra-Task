@@ -1,0 +1,114 @@
+[
+    {
+        "id": 3512308721389,
+        "user_id": 1756111816188,
+        "task_id": 1756196905200,
+        "message": "Size yeni bir görev atandı: 'deneme'",
+        "read": true,
+        "timestamp": "2025-08-26T08:28:25.201811Z"
+    },
+    {
+        "id": 3512403997166,
+        "user_id": 1756111816188,
+        "task_id": 1756196905200,
+        "message": "'yonetici' sizi 'deneme' görevindeki bir yorumda etiketledi.",
+        "read": true,
+        "timestamp": "2025-08-27T10:56:20.977685Z"
+    },
+    {
+        "id": 3512477271991,
+        "user_id": 1756111816188,
+        "task_id": 1756365455802,
+        "message": "Size yeni bir görev atandı: 'deneme'",
+        "read": true,
+        "timestamp": "2025-08-28T07:17:35.803208Z"
+    },
+    {
+        "id": 3512477314416,
+        "user_id": 1756111816188,
+        "task_id": 1756365455802,
+        "message": "'yonetici' sizi 'deneme' görevindeki bir yorumda etiketledi.",
+        "read": true,
+        "timestamp": "2025-08-28T07:18:18.228249Z"
+    },
+    {
+        "id": 3512477463693,
+        "user_id": 1756111816188,
+        "task_id": 1756365647504,
+        "message": "Size yeni bir görev atandı: 'deneme'",
+        "read": true,
+        "timestamp": "2025-08-28T07:20:47.505699Z"
+    },
+    {
+        "id": 3512477484400,
+        "user_id": 1756111816188,
+        "task_id": 1756365647504,
+        "message": "'yonetici' sizi 'deneme' görevindeki bir yorumda etiketledi.",
+        "read": true,
+        "timestamp": "2025-08-28T07:21:08.211851Z"
+    },
+    {
+        "id": 3512479158670,
+        "user_id": 1756111816188,
+        "task_id": 1756367342481,
+        "message": "Size yeni bir görev atandı: 'deneme2'",
+        "read": true,
+        "timestamp": "2025-08-28T07:49:02.482905Z"
+    },
+    {
+        "id": 3512479170591,
+        "user_id": 1756111816188,
+        "task_id": 1756367354402,
+        "message": "Size yeni bir görev atandı: 'deneme'",
+        "read": true,
+        "timestamp": "2025-08-28T07:49:14.403127Z"
+    },
+    {
+        "id": 3512570129633,
+        "user_id": 1756111816188,
+        "task_id": 1756458313444,
+        "message": "Size yeni bir görev atandı: 'deneme'",
+        "read": true,
+        "timestamp": "2025-08-29T09:05:13.445903Z"
+    },
+    {
+        "id": 3512570142591,
+        "user_id": 1756111816188,
+        "task_id": 1756458326402,
+        "message": "Size yeni bir görev atandı: 'deneme'",
+        "read": true,
+        "timestamp": "2025-08-29T09:05:26.403666Z"
+    },
+    {
+        "id": 3512570153112,
+        "user_id": 1756111816188,
+        "task_id": 1756458336923,
+        "message": "Size yeni bir görev atandı: 'deneme'",
+        "read": true,
+        "timestamp": "2025-08-29T09:05:36.924768Z"
+    },
+    {
+        "id": 3513433489143,
+        "user_id": 1756111816188,
+        "task_id": 1757321672953,
+        "message": "Size yeni bir görev atandı: 'ddsfdf'",
+        "read": true,
+        "timestamp": "2025-09-08T08:54:32.956449Z"
+    },
+    {
+        "id": 3513451940060,
+        "user_id": 1756111816188,
+        "task_id": 1756458313444,
+        "message": "'yonetici', 'deneme' görevine bir yorum ekledi.",
+        "read": true,
+        "timestamp": "2025-09-08T14:02:03.872136Z"
+    },
+    {
+        "id": 1757340146943,
+        "user_id": 2,
+        "task_id": 1756458313444,
+        "message": "'Arda', 'deneme' görevine bir yorum ekledi.",
+        "read": true,
+        "timestamp": "2025-09-08T14:02:26.941420Z"
+    }
+]

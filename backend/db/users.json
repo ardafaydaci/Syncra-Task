@@ -1,0 +1,34 @@
+[
+    {
+        "id": 2,
+        "username": "yonetici",
+        "password": "1",
+        "role": "admin",
+        "email": "",
+        "full_name": "Yönetici",
+        "phone_number": null
+    },
+    {
+        "id": 1756111816188,
+        "username": "Arda",
+        "password": "1",
+        "role": "employee",
+        "full_name": "Arda Faydacı",
+        "email": "ardafaydaci.007@gmail.com",
+        "phone_number": "05434581819",
+        "birthday": "2004-05-29",
+        "profile_picture": "user_1756111816188_onepiece_luffy_merry.jpeg"
+    },
+    {
+        "id": 1756458040268,
+        "username": "Berk",
+        "password": "1",
+        "role": "employee"
+    },
+    {
+        "id": 1756458056218,
+        "username": "test",
+        "password": "1",
+        "role": "employee"
+    }
+]

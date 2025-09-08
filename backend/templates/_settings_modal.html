@@ -1,0 +1,97 @@
+<div id="settings-modal" class="modal-backdrop" style="display: none;">
+    <div class="modal-content settings-modal-content">
+        <div class="modal-header">
+            <h2>Ayarlar</h2>
+            <button id="settings-modal-close-btn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body settings-modal-body">
+            <div class="settings-sidebar">
+                <ul class="settings-menu">
+                    <li class="settings-menu-item active" data-tab="profile">
+                        <i class="fa-solid fa-user"></i> Profil
+                    </li>
+                    <li class="settings-menu-item" data-tab="appearance">
+                        <i class="fa-solid fa-palette"></i> Görünüm
+                    </li>
+                    <!-- YENİ EKLENEN ÇIKIŞ BUTONU -->
+                    <li id="logout-btn-modal" class="settings-menu-item logout-item-modal">
+                        <i class="fa-solid fa-right-from-bracket"></i> Çıkış Yap
+                    </li>
+                </ul>
+            </div>
+            <div class="settings-content">
+                <div class="settings-tab-content" id="tab-appearance">
+                    <h4>Görünüm Ayarları</h4>
+                    <hr>
+                    <div class="setting-option">
+                        <div class="setting-text">
+                            <strong>Karanlık Mod</strong>
+                        </div>
+                        <div class="setting-control">
+                            <div id="theme-toggle-btn" class="menu-item theme-switch-container">
+                                <div class="theme-switch">
+                                    <i id="theme-toggle-icon" class="fa-solid fa-moon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-tab-content active" id="tab-profile">
+                    <h4>Profil Ayarları</h4>
+                    <hr>
+                    <form id="profile-settings-form">
+                        <div id="profile-message" class="profile-message"></div>
+                        <div class="profile-form-grid">
+                            <div class="profile-picture-container">
+                                <img src="{{ url_for('static', filename='default_avatar.png') }}" alt="Profil Resmi" id="profile-pic-preview" class="profile-picture-preview">
+                                <!-- YENİ: Butonlar bir div içine alındı -->
+                                <div class="profile-pic-controls">
+                                    <label for="profile-pic-upload" class="profile-pic-upload-label">Değiştir</label>
+                                    <button type="button" id="profile-pic-delete-btn" class="profile-pic-delete-btn">Sil</button>
+                                </div>
+                                <input type="file" id="profile-pic-upload" name="profile_picture" accept="image/*" style="display: none;">
+                            </div>
+                            <div class="profile-form-fields">
+                                <div class="input-group">
+                                    <label for="profile-fullname">İsim Soyisim</label>
+                                    <input type="text" id="profile-fullname" name="full_name">
+                                </div>
+                                <div class="input-group">
+                                    <label for="profile-username">Kullanıcı Adı (Giriş için)</label>
+                                    <input type="text" id="profile-username" name="username">
+                                </div>
+                                <div class="input-group">
+                                    <label for="profile-email">E-posta Adresi</label>
+                                    <input type="email" id="profile-email" name="email">
+                                </div>
+                                <div class="input-group">
+                                    <label for="profile-phone">Telefon Numarası</label>
+                                    <input type="tel" id="profile-phone" name="phone_number">
+                                </div>
+                                <div class="input-group">
+                                    <label for="profile-birthday">Doğum Günü</label>
+                                    <input type="date" id="profile-birthday" name="birthday">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Şifre Değiştir</h4>
+                        <hr>
+                        <div class="input-group">
+                            <label for="profile-old-password">Eski Şifre (Değiştirmek için doldurun)</label>
+                            <input type="password" id="profile-old-password" name="old_password" autocomplete="off">
+                        </div>
+                        <div class="input-group">
+                            <label for="profile-new-password">Yeni Şifre</label>
+                            <input type="password" id="profile-new-password" name="new_password" autocomplete="off">
+                        </div>
+
+                        <div class="profile-form-actions">
+                            <button type="submit" id="save-profile-btn" class="login-btn">Değişiklikleri Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
